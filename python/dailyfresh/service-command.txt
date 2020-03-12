@@ -1,0 +1,48 @@
+#django :开源的Web应用框架，由Python写成。采用了MTV的框架模式，即模型M，视图V和模版T.
+python manager.py makemigrations
+python manager.py migrate
+python manager.py createsuperuser
+python manager.py runserver
+
+#mysql :关系型数据库管理系统
+/etc/init.d/ mysql start
+/etc/init.d/ mysql stop
+/etc/init.d/ mysql restart
+
+#redis :开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库
+redis-server
+redis-cli
+
+#celery :简单、灵活且可靠的，处理大量消息的分布式系统,专注于实时处理的异步任务队列
+celery -A celery_tasks.tasks worker -l info
+
+#fdfs :开源的轻量级分布式文件系统
+sudo fdfs_storaged /etc/fdfs/storage.conf start
+sudo fdfs_trackerd /etc/fdfs/tracker.conf start
+
+#nginx :http和反向代理服务器
+sudo /usr/local/nginx/sbin/nginx
+sudo ./nginx -s stop
+sudo ./sbin/nginx -s reload
+
+
+package:
+    celery==4.1.0
+    Django==1.8.3
+    django-haystack==2.7.0
+    django-redis==4.8.0
+    django-redis-sessions==0.6.1
+    django-tinymce==2.6.0
+    fdfs-client-py==1.2.6
+    itsdangerous==1.1.0
+    jieba==0.39
+    kombu==4.1.0
+    mutagen==1.43.0
+    PyMySQL==0.9.3
+    redis==2.10.6
+    requests==2.22.0
+    Whoosh==2.7.4
+    python-alipay-sdk==1.8
+
+
+
