@@ -1,0 +1,140 @@
+2020-01-18 03:25:53,964 - mini_frame.py[line:191] - INFO: 访问的是---%s
+2020-01-18 03:25:54,245 - mini_frame.py[line:191] - INFO: 访问的是---%s
+2020-01-18 03:25:54,254 - mini_frame.py[line:191] - INFO: 访问的是---%s
+2020-01-18 03:25:54,264 - mini_frame.py[line:191] - INFO: 访问的是---%s
+2020-01-18 03:25:59,320 - mini_frame.py[line:191] - INFO: 访问的是---%s
+2020-01-18 03:27:34,373 - mini_frame.py[line:191] - INFO: 访问的是---/center.html
+2020-01-18 03:27:38,329 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 03:27:40,820 - mini_frame.py[line:191] - INFO: 访问的是---/add/000036.html
+2020-01-18 03:27:42,841 - mini_frame.py[line:191] - INFO: 访问的是---/center.html
+2020-01-18 03:27:53,688 - mini_frame.py[line:191] - INFO: 访问的是---/index11.html
+2020-01-18 03:27:53,690 - mini_frame.py[line:198] - WARNING: no found ---/index11.html
+2020-01-18 03:53:54,926 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 03:53:54,935 - mini_frame.py[line:201] - WARNING: name 'conn' is not defined
+2020-01-18 03:53:55,263 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 03:53:55,269 - mini_frame.py[line:201] - WARNING: name 'conn' is not defined
+2020-01-18 03:53:55,274 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 03:53:55,285 - mini_frame.py[line:201] - WARNING: name 'conn' is not defined
+2020-01-18 03:53:55,298 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 03:53:55,306 - mini_frame.py[line:201] - WARNING: name 'conn' is not defined
+2020-01-18 03:54:27,713 - mini_frame.py[line:191] - INFO: 访问的是---/cen.html
+2020-01-18 03:54:27,715 - mini_frame.py[line:198] - WARNING: no found ---/cen.html
+2020-01-18 03:54:33,603 - mini_frame.py[line:191] - INFO: 访问的是---/center.html
+2020-01-18 03:54:35,375 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 03:54:35,382 - mini_frame.py[line:201] - WARNING: name 'conn' is not defined
+2020-01-18 03:54:35,644 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 03:54:35,661 - mini_frame.py[line:201] - WARNING: name 'conn' is not defined
+2020-01-18 03:54:35,672 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 03:54:35,685 - mini_frame.py[line:201] - WARNING: name 'conn' is not defined
+2020-01-18 03:54:35,700 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 03:54:35,711 - mini_frame.py[line:201] - WARNING: name 'conn' is not defined
+2020-01-18 03:54:40,761 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 03:54:40,767 - mini_frame.py[line:201] - WARNING: name 'conn' is not defined
+2020-01-18 03:55:22,791 - mini_frame.py[line:192] - INFO: 访问的是---/index.html
+2020-01-18 03:55:22,817 - mini_frame.py[line:202] - WARNING: name 'conn' is not defined
+2020-01-18 03:55:22,821 - mini_frame.py[line:192] - INFO: 访问的是---/index.html
+2020-01-18 03:55:22,828 - mini_frame.py[line:202] - WARNING: name 'conn' is not defined
+2020-01-18 03:55:22,839 - mini_frame.py[line:192] - INFO: 访问的是---/index.html
+2020-01-18 03:55:22,851 - mini_frame.py[line:202] - WARNING: name 'conn' is not defined
+2020-01-18 03:55:23,115 - mini_frame.py[line:192] - INFO: 访问的是---/index.html
+2020-01-18 03:55:23,129 - mini_frame.py[line:202] - WARNING: name 'conn' is not defined
+2020-01-18 03:58:09,521 - mini_frame.py[line:192] - INFO: 访问的是---/index.html
+2020-01-18 03:58:09,529 - mini_frame.py[line:202] - WARNING: name 'conn' is not defined
+2020-01-18 03:59:09,461 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 03:59:09,469 - mini_frame.py[line:203] - WARNING: name 'conn' is not defined
+2020-01-18 03:59:17,303 - mini_frame.py[line:193] - INFO: 访问的是---/center.html
+2020-01-18 03:59:19,507 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 03:59:19,513 - mini_frame.py[line:203] - WARNING: name 'conn' is not defined
+2020-01-18 04:01:02,261 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 04:01:02,267 - mini_frame.py[line:203] - WARNING: name 'conn' is not defined
+2020-01-18 04:01:07,218 - mini_frame.py[line:193] - INFO: 访问的是---/center.html
+2020-01-18 04:01:10,123 - mini_frame.py[line:193] - INFO: 访问的是---/center.html
+2020-01-18 04:01:10,818 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 04:01:10,827 - mini_frame.py[line:203] - WARNING: name 'conn' is not defined
+2020-01-18 04:01:46,629 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 04:01:46,637 - mini_frame.py[line:203] - WARNING: name 'conn' is not defined
+2020-01-18 04:01:51,358 - mini_frame.py[line:193] - INFO: 访问的是---/center.html
+2020-01-18 04:01:52,879 - mini_frame.py[line:193] - INFO: 访问的是---/del/000036.html
+2020-01-18 04:01:52,900 - mini_frame.py[line:193] - INFO: 访问的是---/center.html
+2020-01-18 04:04:44,233 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 04:04:44,244 - mini_frame.py[line:203] - WARNING: name 'conn' is not defined
+2020-01-18 04:05:03,108 - mini_frame.py[line:193] - INFO: 访问的是---/center.html
+2020-01-18 04:05:23,986 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 04:05:23,993 - mini_frame.py[line:204] - WARNING: name 'conn' is not defined
+2020-01-18 04:05:59,583 - mini_frame.py[line:193] - INFO: 访问的是---/center.html
+2020-01-18 04:06:02,796 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 04:06:02,803 - mini_frame.py[line:204] - WARNING: name 'conn' is not defined
+2020-01-18 04:06:54,770 - mini_frame.py[line:194] - INFO: 访问的是---/index.html
+2020-01-18 04:06:54,780 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:06:59,072 - mini_frame.py[line:194] - INFO: 访问的是---/index.html
+2020-01-18 04:06:59,082 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:06:59,585 - mini_frame.py[line:194] - INFO: 访问的是---/index.html
+2020-01-18 04:06:59,593 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:06:59,907 - mini_frame.py[line:194] - INFO: 访问的是---/index.html
+2020-01-18 04:06:59,915 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:07:00,158 - mini_frame.py[line:194] - INFO: 访问的是---/index.html
+2020-01-18 04:07:00,167 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:07:00,343 - mini_frame.py[line:194] - INFO: 访问的是---/index.html
+2020-01-18 04:07:00,352 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:08:43,373 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 04:08:43,382 - mini_frame.py[line:203] - WARNING: execute() missing 1 required positional argument: 'query'
+2020-01-18 04:08:45,692 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 04:08:45,699 - mini_frame.py[line:203] - WARNING: execute() missing 1 required positional argument: 'query'
+2020-01-18 04:08:46,464 - mini_frame.py[line:193] - INFO: 访问的是---/index.html
+2020-01-18 04:08:46,475 - mini_frame.py[line:203] - WARNING: execute() missing 1 required positional argument: 'query'
+2020-01-18 04:09:30,490 - mini_frame.py[line:194] - INFO: 访问的是---/index.html
+2020-01-18 04:09:32,798 - mini_frame.py[line:194] - INFO: 访问的是---/add/000426.html
+2020-01-18 04:12:35,675 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:12:35,685 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:12:37,757 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:12:37,765 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:12:38,713 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:12:38,720 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:12:39,955 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:12:39,963 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:12:52,543 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:13:34,692 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:13:34,700 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:14:00,033 - mini_frame.py[line:196] - INFO: 访问的是---/index.html
+2020-01-18 04:14:00,040 - mini_frame.py[line:206] - WARNING: name 'conn' is not defined
+2020-01-18 04:14:01,104 - mini_frame.py[line:196] - INFO: 访问的是---/index.html
+2020-01-18 04:14:01,112 - mini_frame.py[line:206] - WARNING: name 'conn' is not defined
+2020-01-18 04:14:01,953 - mini_frame.py[line:196] - INFO: 访问的是---/index.html
+2020-01-18 04:14:01,965 - mini_frame.py[line:206] - WARNING: name 'conn' is not defined
+2020-01-18 04:14:03,250 - mini_frame.py[line:196] - INFO: 访问的是---/index.html
+2020-01-18 04:14:03,256 - mini_frame.py[line:206] - WARNING: name 'conn' is not defined
+2020-01-18 04:14:03,750 - mini_frame.py[line:196] - INFO: 访问的是---/index.html
+2020-01-18 04:14:03,761 - mini_frame.py[line:206] - WARNING: name 'conn' is not defined
+2020-01-18 04:14:04,006 - mini_frame.py[line:196] - INFO: 访问的是---/index.html
+2020-01-18 04:14:04,011 - mini_frame.py[line:206] - WARNING: name 'conn' is not defined
+2020-01-18 04:14:04,748 - mini_frame.py[line:196] - INFO: 访问的是---/index.html
+2020-01-18 04:14:04,758 - mini_frame.py[line:206] - WARNING: name 'conn' is not defined
+2020-01-18 04:20:07,996 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:20:08,002 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:20:09,095 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:20:09,103 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:20:11,727 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:20:11,738 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:20:12,519 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:20:12,528 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:20:13,138 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:20:13,157 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:20:15,267 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:20:15,276 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:20:17,430 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:20:17,437 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:20:20,323 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:20:20,328 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:20:24,458 - mini_frame.py[line:195] - INFO: 访问的是---/center.html
+2020-01-18 04:20:26,402 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:20:26,408 - mini_frame.py[line:205] - WARNING: name 'conn' is not defined
+2020-01-18 04:23:10,292 - mini_frame.py[line:195] - INFO: 访问的是---/index.html
+2020-01-18 04:24:50,031 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
+2020-01-18 04:24:50,975 - mini_frame.py[line:191] - INFO: 访问的是---/center.html
+2020-01-18 04:24:50,986 - mini_frame.py[line:201] - WARNING: name 'stock_infos' is not defined
+2020-01-18 04:24:52,350 - mini_frame.py[line:191] - INFO: 访问的是---/center.html
+2020-01-18 04:24:52,377 - mini_frame.py[line:201] - WARNING: name 'stock_infos' is not defined
+2020-01-18 04:24:59,739 - mini_frame.py[line:191] - INFO: 访问的是---/center.html
+2020-01-18 04:24:59,747 - mini_frame.py[line:201] - WARNING: name 'stock_infos' is not defined
+2020-01-18 04:25:20,346 - mini_frame.py[line:191] - INFO: 访问的是---/center.html
+2020-01-18 04:25:23,441 - mini_frame.py[line:191] - INFO: 访问的是---/index.html
