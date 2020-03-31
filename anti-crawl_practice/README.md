@@ -43,7 +43,7 @@ print(response.status_code)
 
 可以通过网络分析查看 `data` 中数据参数,解析加密的过程,用相同的加密方式加密,获得正确的签名验证.
 
-案例:[有道翻译验证](<++>) 
+案例:[有道翻译验证](https://github.com/zlj-zz/python_/blob/master/anti-crawl_practice/youdao/youdao.py) 
 
 常使用 `MD5` 加密方式和 时间戳 来用作加密基础.
 
