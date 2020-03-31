@@ -1,2 +1,2 @@
-![pic](./slide.gif) 
+![pic](./html/slide.gif) 
 
