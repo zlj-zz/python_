@@ -26,3 +26,22 @@
 - [slide_verify](https://github.com/zlj-zz/python_/tree/master/anti-crawl_practice/slide_vrify) 
 
     Slider validation bypass case.
+
+    you should install `selenium`,like:
+    ```shell
+    pip install selenium
+    ```
+
+- [calculation_vrify](https://github.com/zlj-zz/python_/tree/master/anti-crawl_practice/calculation_vrify) 
+
+    Calculation validation bypas case.
+
+    you should install `tesseract` and `pytesseract`, if you are `Ubuntu` like:
+    ```shell
+    sudo apt install tesseract-ocr --fix-missing
+    sudo apt install libtesseract-dev --fix-missing
+
+    pip install pytesseract
+    ```
+
+    
