@@ -87,7 +87,8 @@ if __name__ == "__main__":
     # image binarization
     image = handler(gray)
     strings = pytesseract.image_to_string(image)
-
+    print(strings)
+    # get number and operator
     string = re.findall(r'\d+', strings)
     operator = re.findall(r'[+|\-|\*]', strings)
 
