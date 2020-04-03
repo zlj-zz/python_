@@ -43,5 +43,8 @@
 
     pip install pytesseract
     ```
+- [picture_disguise](https://github.com/zlj-zz/python_/tree/master/anti-crawl_practice/picture_disguise) 
+
+    Picture confusion anti-crawler
 
     
