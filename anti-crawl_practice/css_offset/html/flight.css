@@ -1,0 +1,625 @@
+.fix_price .prc_wp {
+	display: inline-block;
+	height: 26px
+}
+
+.fix_price .prc_wp .rel {
+	position: relative;
+	padding-left: 1px
+}
+
+.fix_price .prc_wp b {
+	position: absolute;
+	width: 18px;
+	letter-spacing: 0;
+	word-spacing: 0;
+	display: block;
+	top: 0;
+	background: #fff;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	font-weight: normal
+}
+
+.fix_price .prc_wp b i {
+	font-style: normal;
+	font-weight: normal;
+	width: 18px;
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: baseline
+}
+
+.e-ota-outer:hover .fix_price b {
+	background: #ebf8fd
+}
+
+.iconfont {
+	vertical-align: middle;
+	display: inline-block;
+	font-family: "qicon";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+.m-condition .e-filter .sort .s-item .iconfont {
+	visibility: hidden;
+	margin: -3px 0 0 0;
+	color: #26b4d3;
+	font-size: 16px
+}
+
+.m-condition .e-filter .sort .s-item.cur .iconfont {
+	visibility: visible
+}
+
+.m-condition .e-filter .item .filter .iconfont {
+	margin: -3px 0 0 0;
+	color: #26b4d3
+}
+
+.m-condition .e-filter .item .filter .iconfont:before {
+	content: "\F3C7";
+	font-family: "qicon"
+}
+
+.m-condition .e-filter .item:hover .filter .iconfont:before {
+	content: "\F3C6"
+}
+
+.m-condition .e-select li .iconfont {
+	cursor: pointer;
+	font-size: 15px;
+	margin: -1px 0 0 5px
+}
+
+.iconfont {
+	vertical-align: middle;
+	display: inline-block;
+	font-family: "qicon";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+.rmb {
+	font-weight: normal;
+	font-size: 12px;
+	font-family: arial;
+	font-style: normal
+}
+
+.m-datebar-bd .rmb {
+	display: inline-block;
+	margin-right: 5px
+}
+
+.m-datebar-bd .prev .iconfont,.m-datebar-bd .next .iconfont {
+	font-weight: 700;
+	color: #bfbfbf
+}
+
+.m-datebar-bd .prev:hover .iconfont,.m-datebar-bd .next:hover .iconfont {
+	color: #26b4d3
+}
+
+.m-datebar-bd .dis .iconfont {
+	color: #e9e9e9
+}
+
+.m-datebar-bd .dis:hover .iconfont {
+	color: #e9e9e9
+}
+
+.m-datebar-ft .iconfont {
+	font-size: 26px
+}
+
+.m-datebar-ft.active .info:hover .iconfont {
+	color: #26b4d3
+}
+
+.m-datebar-ft.active .close .iconfont {
+	font-size: 36px !important;
+	font-weight: 400 !important
+}
+
+.iconfont {
+	vertical-align: middle;
+	display: inline-block;
+	font-family: "qicon";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+.m-ota-lst .rmb {
+	font-style: normal;
+	font-family: Arial
+}
+
+.m-ota-lst .b-ota-bd .e-ota-outer .e-ota .col-prc .assure .coupon-sel .c-arr .iconfont {
+	cursor: pointer;
+	margin: -14px 0 0 -1px
+}
+
+.m-ota-lst .b-ota-bd .e-ota-outer .e-ota .col-prc .assure .coupon-sel .c-arr .iconfont:before {
+	content: "\F3C7";
+	font-family: "qicon"
+}
+
+.m-ota-lst .b-ota-bd .e-ota-outer .e-ota .col-prc .assure .coupon-sel .c-tips .ul-tips-wrap .c-prc .rmb {
+	font-size: 12px;
+	margin-right: 2px
+}
+
+.m-ota-lst .b-ota-bd .e-ota-outer .e-ota .col-prc .assure .coupon-sel-on .c-arr .iconfont:before {
+	content: "\F3C6"
+}
+
+.m-ota-lst .b-ota-bd .e-ota-outer .e-ota .col-prc .prc .rmb {
+	font-size: 14px;
+	margin-right: 3px
+}
+
+html {
+	background: #f3f3f3;
+	color: #333;
+	font-size: 12px;
+	font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Tahoma,sans-serif
+}
+
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,figure,form,fieldset,legend,input,textarea,button,p,blockquote,th,td,pre,xmp {
+	margin: 0;
+	padding: 0
+}
+
+@font-face {
+	font-family:'qicon';src:url("https://s.qunarzz.com/flight_qzz/fonts/1.0.5/flight_qzz.eot?v=1");src:url("https://s.qunarzz.com/flight_qzz/fonts/1.0.5/flight_qzz.eot?v=1#iefix") format("eot"),url("https://s.qunarzz.com/flight_qzz/fonts/1.0.5/flight_qzz.woff?v=1") format("woff"),url("https://s.qunarzz.com/flight_qzz/fonts/1.0.5/flight_qzz.ttf?v=1") format("truetype"),url("https://s.qunarzz.com/flight_qzz/fonts/1.0.5/flight_qzz.svg?v=1#iconfront") format("svg")
+}
+
+.iconfont {
+	vertical-align: middle;
+	display: inline-block;
+	font-family: "qicon";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+.rmb {
+	font-weight: normal;
+	font-size: 12px;
+	font-family: arial;
+	font-style: normal
+}
+
+.m-airfly-lst .b-airfly {
+	background: #fff;
+	border-bottom: 1px solid #cfcfcf
+}
+
+.m-airfly-lst .col-airline {
+	display: inline-block;
+	vertical-align: middle;
+	width: 220px;
+	color: #555
+}
+
+.m-airfly-lst .col-airline .air {
+	font-size: 16px;
+	height: 24px;
+	margin-bottom: 3px
+}
+
+.m-airfly-lst .col-airline .air .iconfont {
+	font-size: 24px;
+	width: 34px;
+	margin-top: -4px
+}
+
+.m-airfly-lst .col-airline .air .f-red {
+	color: #ef5e5d
+}
+
+.m-airfly-lst .col-airline .air .f-yellow {
+	color: #ffaf02
+}
+
+.m-airfly-lst .col-airline .air .f-blue {
+	color: #27b3d4
+}
+
+.m-airfly-lst .col-airline .air .air-logo {
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	margin-right: 10px
+}
+
+.m-airfly-lst .col-airline .num {
+	padding: 0 0 3px 34px;
+	color: #888
+}
+
+.m-airfly-lst .col-airline .num .n {
+	padding-right: 4px;
+	display: inline-block
+}
+
+.m-airfly-lst .col-airline .num .h {
+	padding-right: 4px;
+	color: #46d2a9
+}
+
+.m-airfly-lst .col-airline .num .info {
+	font-size: 14px;
+	color: #333
+}
+
+.m-airfly-lst .col-airline .trans {
+	color: #40bad6
+}
+
+.m-airfly-lst .col-airline .vim {
+	padding-left: 34px;
+	padding-bottom: 3px
+}
+
+.m-airfly-lst .col-airline .vim .v {
+	padding-right: 6px;
+	color: #40bad6
+}
+
+.m-airfly-lst .col-airline .g-tips .m-tips .b-tips .air {
+	margin: 3px 0 0
+}
+
+.m-airfly-lst .col-time {
+	display: inline-block;
+	vertical-align: middle;
+	width: 482px
+}
+
+.m-airfly-lst .col-time h2 {
+	font-size: 24px;
+	margin-bottom: 8px;
+	font-weight: normal
+}
+
+.m-airfly-lst .col-time .airport {
+	color: #888;
+	margin-top: -3px;
+	white-space: nowrap
+}
+
+.m-airfly-lst .col-time .daycross {
+	position: relative;
+	width: 0;
+	height: 0
+}
+
+.m-airfly-lst .col-time .daycross .d {
+	position: absolute;
+	top: -14px;
+	color: #ff8205;
+	white-space: nowrap
+}
+
+.m-airfly-lst .col-time .sep-lf {
+	float: left;
+	width: 163px;
+	text-align: right
+}
+
+.m-airfly-lst .col-time .sep-rt {
+	float: left
+}
+
+.m-airfly-lst .col-time .sep-ct {
+	float: left;
+	width: 120px;
+	margin: 0 23px;
+	text-align: center;
+	color: #555
+}
+
+.m-airfly-lst .col-time .sep-ct .range {
+	height: 20px;
+	color: #888
+}
+
+.m-airfly-lst .col-time .sep-ct .line {
+	border-bottom: 1px solid #dfdfdf
+}
+
+.m-airfly-lst .col-time .sep-ct .line:after {
+	content: " ";
+	border-bottom: 1px solid #dfdfdf;
+	width: 7px;
+	margin-top: -2px;
+	display: inline-block;
+	-webkit-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	transform: rotate(30deg)
+}
+
+.m-airfly-lst .col-time .trans {
+	clear: both;
+	width: 100%;
+	text-align: center;
+	white-space: nowrap
+}
+
+.m-airfly-lst .col-time .trans .terminaTips {
+	margin: -16px 0 5px;
+	color: #40bad6
+}
+
+.m-airfly-lst .col-time .trans .t {
+	padding: 0 5px 10px 0
+}
+
+.m-airfly-lst .col-time .trans .t .v {
+	color: #40bad6
+}
+
+.m-airfly-lst .col-time .trans .b-tips {
+	min-width: 190px
+}
+
+.m-airfly-lst .col-time .trans .e-tipscont {
+	position: relative
+}
+
+.m-airfly-lst .col-time .trans .seg-ct {
+	margin: 10px 0 3px 25px
+}
+
+.m-airfly-lst .col-time .trans .seg-ct .seg {
+	margin: 3px 0
+}
+
+.m-airfly-lst .col-time .trans .seg-ct .transfer,.m-airfly-lst .col-time .trans .seg-ct .stop {
+	margin: 8px 0
+}
+
+.m-airfly-lst .col-time .trans .seg-ct .time {
+	margin-right: 12px
+}
+
+.m-airfly-lst .col-time .trans .seg-ct .city {
+	margin-left: 6px;
+	color: #aaa
+}
+
+.m-airfly-lst .col-time .trans .seg-ct .cross-day {
+	display: inline-block;
+	position: relative;
+	left: -1px;
+	top: -7px;
+	color: #ff8300;
+	-webkit-transform: scale(0.85);
+	-ms-transform: scale(0.85);
+	transform: scale(0.85)
+}
+
+.m-airfly-lst .col-time .trans .left-border {
+	position: absolute;
+	width: 0;
+	top: 10px;
+	left: 7px;
+	bottom: 10px;
+	z-index: -1;
+	border-right: 1px solid #00bcd4
+}
+
+.m-airfly-lst .col-time .trans .stop:before,.m-airfly-lst .col-time .trans .stop:after,.m-airfly-lst .col-time .trans .transfer:before,.m-airfly-lst .col-time .trans .transfer:after,.m-airfly-lst .col-time .trans .dep:before,.m-airfly-lst .col-time .trans .dep:after,.m-airfly-lst .col-time .trans .arr:before,.m-airfly-lst .col-time .trans .arr:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	display: inline-block;
+	width: 15px
+}
+
+.m-airfly-lst .col-time .trans .stop span,.m-airfly-lst .col-time .trans .transfer span {
+	display: inline-block;
+	padding: 0 3px 2px;
+	border-radius: 3px;
+	background-color: #eee;
+	font-size: 12px;
+	color: #666;
+	-webkit-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	transform: scale(0.95);
+	-webkit-transform-origin: left;
+	-ms-transform-origin: left;
+	transform-origin: left
+}
+
+.m-airfly-lst .col-time .trans .stop span span,.m-airfly-lst .col-time .trans .transfer span span {
+	padding: 0
+}
+
+.m-airfly-lst .col-time .trans .stop.normal-font,.m-airfly-lst .col-time .trans .transfer.normal-font {
+	margin: 3px 0
+}
+
+.m-airfly-lst .col-time .trans .stop.normal-font span,.m-airfly-lst .col-time .trans .transfer.normal-font span {
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+	background-color: transparent
+}
+
+.m-airfly-lst .col-time .trans .transfer:before {
+	content: ' ';
+	margin-top: -25px;
+	height: 73px;
+	background: url(//s.qunarzz.com/flight_qzz/transfer_tip1.png) 0 0 no-repeat
+}
+
+.m-airfly-lst .col-time .trans .stop:before {
+	content: ' ';
+	margin-top: 4px;
+	height: 15px;
+	background: url(//s.qunarzz.com/flight_qzz/transfer_tip1.png) -15px 0 no-repeat
+}
+
+.m-airfly-lst .col-time .trans .dep:before,.m-airfly-lst .col-time .trans .arr:before {
+	left: 4px;
+	margin-top: 7px;
+	content: '';
+	height: 7px;
+	width: 7px;
+	background: url(//s.qunarzz.com/flight_qzz/transfer_tip1.png) -15px -15px no-repeat
+}
+
+.m-airfly-lst .col-price {
+	display: inline-block;
+	vertical-align: middle;
+	width: 160px;
+	text-align: right;
+	color: #ff8205
+}
+
+.m-airfly-lst .col-price .prc {
+	font-size: 30px;
+	margin: 0 -8px 3px 0
+}
+
+.m-airfly-lst .col-price .prc .rmb {
+	font-size: 16px;
+	font-family: Arial;
+	margin: -2px 2px 0 0;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.m-airfly-lst .col-price .noprc {
+	font-size: 18px;
+	color: #555
+}
+
+.m-airfly-lst .col-price .sta .s {
+	padding-left: 10px
+}
+
+.m-airfly-lst .col-price .vim .v {
+	padding-left: 6px
+}
+
+.m-airfly-lst .col-price .vim .dis {
+	color: #888;
+	margin-right: -6px
+}
+
+.m-airfly-lst .col-price .vim .trans-voucher {
+	color: #ff8205
+}
+
+.m-airfly-lst .col-price .vim-hidden {
+	visibility: hidden
+}
+
+.m-airfly-lst .col-fold {
+	display: none;
+	clear: both;
+	white-space: nowrap;
+	color: #40bad6;
+	text-align: right;
+	position: relative;
+	height: 0
+}
+
+.m-airfly-lst .col-fold .fd {
+	position: absolute;
+	right: 0;
+	bottom: 0
+}
+
+.m-airfly-lst .e-airfly-wf .col-trip .s-line {
+	border-bottom: 1px dotted #d7d7d7;
+	margin: 15px 0 20px
+}
+
+.m-airfly-lst .e-airfly-wf .col-trip .s-trip,.m-airfly-lst .e-airfly-wf .col-trip .s-line {
+	zoom: 1
+}
+
+.m-airfly-lst .e-airfly-wf .col-trip .s-trip:after,.m-airfly-lst .e-airfly-wf .col-trip .s-line:after {
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+	content: "."
+}
+
+.m-airfly-lst .b-airfly-on {
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	position: relative;
+	margin: 10px 0
+}
+
+.m-airfly-lst .b-airfly-on .e-airfly .col-fold {
+	display: block
+}
+
+.m-airfly-lst .b-airfly-on .e-airfly:hover {
+	-webkit-box-shadow: none;
+	box-shadow: none
+}
+
+.m-airfly-lst .b-airfly-detail {
+	margin-top: 0
+}
+
+.m-airfly-lst .b-airfly-detail .ota-triangle {
+	display: none
+}
+
+.m-airfly-lst .b-airfly-rec .e-airfly {
+	padding: 20px 30px 15px 15px
+}
+
+.m-airfly-lst .b-airfly-rec .e-airfly .col-airline {
+	padding-top: 8px
+}
+
+.m-airfly-lst .b-airfly-rec .e-airfly .col-time .sep-ct .line {
+	margin-bottom: 0
+}
+
+.m-airfly-lst .b-airfly-rec .e-airfly .range {
+	width: 120%;
+	margin-left: -12px
+}
+
+.m-airfly-lst .b-airfly-rec .m-ota-lst .ota-triangle-bg p {
+	border-bottom-color: #fdfdfd
+}
+
+.m-airfly-lst .b-airfly-clicked .e-airfly {
+	background: #fbfbfb
+}
+
+.m-airfly-lst .b-airfly-clicked .e-airfly .col-price .prc .prc_wp b {
+	background: #fbfbfb
+}
