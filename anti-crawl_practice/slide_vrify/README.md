@@ -1,2 +1,0 @@
-![pic](./html/slide.gif) 
-
