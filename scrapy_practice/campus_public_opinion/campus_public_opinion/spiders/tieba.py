@@ -27,9 +27,10 @@ class TiebaSpider(object):
         return url_list
 
     def get_second_level_url_list(self):
-        self.a = 10
-        if (a := self.a -1):
-            print("ok")
+        # self.a = 10
+        # if (a = self.a -1):
+        #     print("ok")
+        pass
 
     def parse_url(self, url):
         """获取网页源码"""
@@ -82,7 +83,7 @@ if __name__ == '__main__':
     # print(os.path.abspath("../..")+"/tieba")
     a = 10
     a -= 1
-    if (a:=1) >0:
-        print(a)
+    # if (a:=1) >0:
+    #     print(a)
 
 # 带headers不行
