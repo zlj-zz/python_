@@ -6,6 +6,7 @@ from django.db import models
 
 class Category(models.Model):
     """Docstring for Category. """
+
     STATUS_NORMAL = 1
     STATUS_DELETE = 0
     STATUS_ITEMS = (
@@ -24,9 +25,17 @@ class Category(models.Model):
     class Meta:
         verbose_name = verbose_name_plural = "分类"
 
+    def __str__(self):
+        """TODO: Docstring for __str.
+        :returns: TODO
+
+        """
+        return self.name
+
 
 class Tag(models.Model):
     """Docstring for Tag. """
+
     STATUS_NORMAL = 1
     STATUS_DELETE = 0
     STATUS_ITEMS = (
@@ -44,9 +53,17 @@ class Tag(models.Model):
     class Meta:
         verbose_name = verbose_name_plural = "标签"
 
+    def __str__(self):
+        """TODO: Docstring for __str.
+        :returns: TODO
+
+        """
+        return self.name
+
 
 class Post(models.Model):
     """Docstring for Post. """
+
     STATUS_NORMAL = 1
     STATUS_DELETE = 0
     STATUS_DRAFT = 2
@@ -66,9 +83,17 @@ class Post(models.Model):
     category = models.ForeignKey(Category, verbose_name="分类")
     tag = models.ManyToManyField(Tag, verbose_name="标签")
     owner = models.ForeignKey(User, verbose_name="作者")
-    created_time = models.DateTimeField(auto_now_add=True,
-                                        verbose_name="创建是时间")
+    created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
 
     class Meta:
         verbose_name = verbose_name_plural = "文章"
         ordering = ['-id']
+
+    '''
+    def __str__(self):
+        """TODO: Docstring for __str.
+        :returns: TODO
+
+        """
+        return self.name
+    '''
