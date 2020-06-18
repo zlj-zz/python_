@@ -1,3 +1,13 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+
+def links(request):
+    """TODO: Docstring for links.
+
+    :request: TODO
+    :returns: TODO
+
+    """
+
+    return HttpResponse("links")
