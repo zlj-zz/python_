@@ -16,5 +16,5 @@ class LinkAdmin(BaseOwnerAdmin):
 class SideBarAdmin(BaseOwnerAdmin):
     """Docstring for SideBarAdmin. """
     list_display = ('title', 'display_type', 'content', 'created_time')
-    fields = ('title', 'display_type', ' content')
+    fields = ('title', 'display_type', 'content')
 

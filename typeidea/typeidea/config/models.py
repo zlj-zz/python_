@@ -6,6 +6,7 @@ from django.db import models
 
 class Link(models.Model):
     """Docstring for Link. """
+
     STATUS_NORMAL = 1
     STATUS_DELETE = 0
     STATUS_ITEMS = (
@@ -22,15 +23,19 @@ class Link(models.Model):
                                          choices=zip(range(1, 6), range(1, 6)),
                                          verbose_name="权重",
                                          help_text="权重高展示顺序靠前")
-    onwer = models.ForeignKey(User, verbose_name="作者")
+    owner = models.ForeignKey(User, verbose_name="作者")
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
 
     class Meta:
         verbose_name = verbose_name_plural = "友链"
 
+    def __str__(self):
+        return self.title
+
 
 class SideBar(models.Model):
     """Docstring for SideBar. """
+
     STATUS_SHOW = 1
     STATUS_HIDE = 0
     STATUS_ITEMS = (
@@ -55,9 +60,12 @@ class SideBar(models.Model):
     status = models.PositiveIntegerField(default=STATUS_SHOW,
                                          choices=STATUS_ITEMS,
                                          verbose_name="状态")
-    onwer = models.ForeignKey(User, verbose_name="作者")
+    owner = models.ForeignKey(User, verbose_name="作者")
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
 
     class Meta:
         verbose_name = verbose_name_plural = "侧边栏"
+
+    def __str__(self):
+        return self.title
 
