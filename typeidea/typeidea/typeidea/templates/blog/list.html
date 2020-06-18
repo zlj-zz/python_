@@ -9,6 +9,21 @@
 </head>
 
 <body>
+  <div>
+    {% for cate in navs %}
+    <a href="/category/{{ cate.id }}/">{{ cate.name }}</a>
+    {% endfor %}
+  </div>
+  <hr>
+
+  {% if tag %}
+  标签页：{{ tag.name }}
+  {% endif %}
+
+  {% if category %}
+  分类页：{{ category.name }}
+  {% endif %}
+
   <ul>
     {% for post in post_list %}
     <li>
@@ -21,6 +36,13 @@
     </li>
     {% endfor %}
   </ul>
+
+  <hr>
+  <div>
+    {% for cate in categories %}
+    <a href="/category/{{ cate.id }}/">{{ cate.name }}</a>
+    {% endfor %}
+  </div>
 </body>
 
 </html>
