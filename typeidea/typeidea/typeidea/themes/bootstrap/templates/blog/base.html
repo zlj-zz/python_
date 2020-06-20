@@ -11,6 +11,12 @@
       margin-bottom: 5px;
     }
   </style>
+  {% block extra_head %}
+  <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/googlecode.min.css">
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js">
+  </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  {% endblock %}
 </head>
 
 <body>
@@ -31,10 +37,12 @@
         </form>
       </div>
     </nav>
+    {% block head %}
     <div class="jumbotron">
       <h1 class="display-4">Typeidea</h1>
       <p class="lead">基于 Django 的多人博客系统</p>
     </div>
+    {% endblock %}
   </div>
 
   <div class="container main">
@@ -49,7 +57,7 @@
                 {% for sidebar in sidebars %}
                 <div class="card sidebar">
                     <div class="card-body">
-                        <h4 class="card-title"{{ sidebar.title }}</h4>
+                        <h4 class="card-title">{{ sidebar.title }}</h4>
                         <p>
                         {{ sidebar.content_html }}
                         </p>
@@ -73,6 +81,9 @@
       </div>
       <div class="container power">
         <span class="text-muted">Power by Typeidea</span>
+        <span style=""text-align:right;>
+        [<a href="/links/" >友情链接</a>]
+        </span>
       </div>
       {% endblock %}
     </footer>

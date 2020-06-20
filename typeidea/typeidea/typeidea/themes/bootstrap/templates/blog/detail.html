@@ -1,7 +1,11 @@
 {% extends "./base.html" %}
+{% load comment_block %}
 
 {% block title %}
 {{ post.title }}
+{% endblock %}
+
+{% block head %}
 {% endblock %}
 
 {% block main %}
@@ -15,6 +19,14 @@
 </div>
 <hr>
 
-<p class="card-text">{{ post.content }}</p>
+<p class="card-text">
+{% autoescape off %}
+{{ post.content_html }}
+{% endautoescape %}
+</p>
+
 {% endif %}
+
+{% comment_block request.path %}
+
 {% endblock %}
