@@ -16,6 +16,8 @@ Including another URLconf
 AA2FA6A5C09CB2CC870E39D9AA751EFDC3B01159
 口唇之欲
 """
+import xadmin
+
 from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.sitemaps import views as sitemap_views
@@ -24,10 +26,10 @@ from django.contrib.sitemaps import views as sitemap_views
 from typeidea.custom_site import custom_site
 from config.views import LinkListView
 from comment.views import CommentView
-from blog.views import (IndexView, CategoryView, TagView, PostDetailView,
-                        SearchView, AuthorView)
 from blog.rss import LatestPostFeed
 from blog.sitemap import PostSitemap
+from blog.views import (IndexView, CategoryView, TagView, PostDetailView,
+                        SearchView, AuthorView)
 
 urlpatterns = [
     url(r'^rss|feed/', LatestPostFeed(), name='rss'),
@@ -49,5 +51,5 @@ urlpatterns = [
         name='post-detail'),
     url(r'^links/$', LinkListView.as_view(), name='links'),
     url(r'^super_admin/', admin.site.urls, name='super-admin'),
-    url(r'^admin/', custom_site.urls, name='admin'),
+    url(r'^admin/', xadmin.site.urls, name='xadmin'),
 ]

@@ -29,6 +29,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'xadmin',
+    'crispy_forms',
     'typeidea',
     'blog',
     'config',
@@ -125,3 +127,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/tmp/static'
+
+XADMIN_TITLE = 'Typeidea 后台管理'
+XADMIN_FOOTER_TITLE = 'power by typeidea'
