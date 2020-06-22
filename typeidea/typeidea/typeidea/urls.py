@@ -17,6 +17,8 @@ AA2FA6A5C09CB2CC870E39D9AA751EFDC3B01159
 口唇之欲
 """
 import xadmin
+from rest_framework.routers import DefaultRouter
+from rest_framework.documentation import include_docs_urls
 
 from django.conf import settings
 from django.conf.urls import url, include
@@ -31,9 +33,17 @@ from blog.rss import LatestPostFeed
 from blog.sitemap import PostSitemap
 from blog.views import (IndexView, CategoryView, TagView, PostDetailView,
                         SearchView, AuthorView)
+from blog.apis import PostViewSet
 from .autocomplete import CategoryAutocomplete, TagAutocomplete
 
+router = DefaultRouter()
+router.register(r'post', PostViewSet, base_name='api-post')
+
 urlpatterns = [
+    # url(r'^api/post/', post_list, name='post-list'),
+    # url(r'^api/post/', PostList.as_view(), name='post-list'),
+    url(r'^api/', include(router.urls, namespace='api')),
+    url(r'^api/docs/', include_docs_urls(title='typeidea apis')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^category-autocomplete/$',
         CategoryAutocomplete.as_view(),
