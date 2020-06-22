@@ -105,6 +105,7 @@ class Post(models.Model):
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     pv = models.PositiveIntegerField(default=1)
     uv = models.PositiveIntegerField(default=1)
+    is_md = models.BooleanField(default=False, verbose_name='markdown语法')
 
     class Meta:
         verbose_name = verbose_name_plural = "文章"
@@ -174,5 +175,8 @@ class Post(models.Model):
         return cls.objects.filter(status=cls.STATUS_NORMAL).order_by('-pv')
 
     def save(self, *args, **kwargs):
-        self.content_html = mistune.markdown(self.content)
+        if self.is_md:
+            self.content_html = mistune.markdown(self.content)
+        else:
+            self.content_html = self.content
         super().save(*args, **kwargs)
