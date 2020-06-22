@@ -30,8 +30,15 @@ from blog.rss import LatestPostFeed
 from blog.sitemap import PostSitemap
 from blog.views import (IndexView, CategoryView, TagView, PostDetailView,
                         SearchView, AuthorView)
+from .autocomplete import CategoryAutocomplete, TagAutocomplete
 
 urlpatterns = [
+    url(r'^category-autocomplete/$',
+        CategoryAutocomplete.as_view(),
+        name='category-autocomplete'),
+    url(r'^tag-autocomplete/$',
+        TagAutocomplete.as_view(),
+        name='tag-autocomplete'),
     url(r'^rss|feed/', LatestPostFeed(), name='rss'),
     url(r'^sitemap\.xml$', sitemap_views.sitemap,
         {'sitemaps': {
