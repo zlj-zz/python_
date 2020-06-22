@@ -18,12 +18,13 @@ AA2FA6A5C09CB2CC870E39D9AA751EFDC3B01159
 """
 import xadmin
 
-from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls import url, include
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps import views as sitemap_views
 
 # from blog.views import post_list, post_detail, PostDetailView
-from typeidea.custom_site import custom_site
 from config.views import LinkListView
 from comment.views import CommentView
 from blog.rss import LatestPostFeed
@@ -33,6 +34,7 @@ from blog.views import (IndexView, CategoryView, TagView, PostDetailView,
 from .autocomplete import CategoryAutocomplete, TagAutocomplete
 
 urlpatterns = [
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^category-autocomplete/$',
         CategoryAutocomplete.as_view(),
         name='category-autocomplete'),
@@ -59,4 +61,4 @@ urlpatterns = [
     url(r'^links/$', LinkListView.as_view(), name='links'),
     url(r'^super_admin/', admin.site.urls, name='super-admin'),
     url(r'^admin/', xadmin.site.urls, name='xadmin'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

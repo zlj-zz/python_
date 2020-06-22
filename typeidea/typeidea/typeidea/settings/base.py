@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'ckeditor',
+    'ckeditor_uploader',
     'dal',
     'dal_select2',
     'xadmin',
@@ -143,3 +144,7 @@ CKEDITOR_CONFIGS = {
         'extraPlugins': 'codesnippet', # 配置代码插件
     },
 }
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+CKEDITOR_UPLOAD_PATH = "article_images"
