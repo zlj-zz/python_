@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ckeditor',
     'dal',
     'dal_select2',
     'xadmin',
@@ -132,3 +133,13 @@ STATIC_ROOT = '/tmp/static'
 
 XADMIN_TITLE = 'Typeidea 后台管理'
 XADMIN_FOOTER_TITLE = 'power by typeidea'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 800,
+        'tabSpace': 4,
+        'extraPlugins': 'codesnippet', # 配置代码插件
+    },
+}
