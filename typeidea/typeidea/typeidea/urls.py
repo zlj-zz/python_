@@ -33,11 +33,12 @@ from blog.rss import LatestPostFeed
 from blog.sitemap import PostSitemap
 from blog.views import (IndexView, CategoryView, TagView, PostDetailView,
                         SearchView, AuthorView)
-from blog.apis import PostViewSet
+from blog.apis import PostViewSet, CategoryViewSet
 from .autocomplete import CategoryAutocomplete, TagAutocomplete
 
 router = DefaultRouter()
 router.register(r'post', PostViewSet, base_name='api-post')
+router.register(r'category', CategoryViewSet, base_name='api-category')
 
 urlpatterns = [
     # url(r'^api/post/', post_list, name='post-list'),
