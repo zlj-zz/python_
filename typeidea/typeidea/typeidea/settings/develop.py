@@ -15,9 +15,14 @@ MIDDLEWARE += [
 
 INTERNAL_IPS = ['127.0.0.1']
 
-# DATABASES = {
-# 'default': {
-# 'ENGING': 'django.db.backends.sqlite3',
-# 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-# }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'typeidea',
+        'USER': 'root',
+        'PASSWORD': 'mysql',
+        'HOST': '127.0.0.1',
+        'POST': 3306,
+    },
+}
+
