@@ -159,7 +159,7 @@ class Post(models.Model):
         return post_list, category
 
     @classmethod
-    def latest_posts(cls):
+    def latest_posts(cls, with_related=True):
         """TODO: Docstring for latest_posts.
 
         :cls: TODO
@@ -168,6 +168,8 @@ class Post(models.Model):
         """
 
         queryset = cls.objects.filter(status=cls.STATUS_NORMAL)
+        if with_related:
+            queryset = queryset.select_related('owner', 'category')
         return queryset
 
     @classmethod

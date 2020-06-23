@@ -73,3 +73,10 @@ urlpatterns = [
     url(r'^super_admin/', admin.site.urls, name='super-admin'),
     url(r'^admin/', xadmin.site.urls, name='xadmin'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [
+        # url(r'^__debug__/', include(debug_toolbar.urls)),
+        url(r'^silk/', include('silk.urls', namespace='silk')),
+    ]
