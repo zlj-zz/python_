@@ -38,12 +38,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tinymce',  # 富文本编辑器
-    'haystack',  # 全文检索框架
-    'user',  # 用户模块
-    'goods',  # 商品模块
-    'cart',  # 购物车模块
-    'order',  # 订单模块
+    'tinymce', # 富文本编辑器
+    'haystack', # 全文检索框架
+    'user', # 用户模块
+    'goods', # 商品模块
+    'cart', # 购物车模块
+    'order', # 订单模块
 )
 
 MIDDLEWARE_CLASSES = (
@@ -173,4 +173,3 @@ HAYSTACK_CONNECTIONS = {
 
 # 当添加、修改、删除数据时,自动生成索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
-

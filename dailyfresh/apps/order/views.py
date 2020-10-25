@@ -15,12 +15,11 @@ from order.models import OrderInfo, OrderGoods
 
 from alipay import AliPay, ISVAliPay
 
-
 # Create your views here.
+
 
 class OrderPlaceView(LoginRequiredMixin, View):
     '''提交订单'''
-
     def post(self, request):
         ''''''
         user = request.user
@@ -63,7 +62,6 @@ class OrderPlaceView(LoginRequiredMixin, View):
 
 class OrderCommitView(View):
     '''创建订单'''
-
     @transaction.atomic
     def post(self, request):
         user = request.user
@@ -92,7 +90,8 @@ class OrderCommitView(View):
         save_id = transaction.savepoint()
         try:
             order = OrderInfo.objects.create(order_id=order_id,
-                                             user=user, addr=addr,
+                                             user=user,
+                                             addr=addr,
                                              pay_method=pay_method,
                                              total_count=total_count,
                                              total_price=total_amount,
@@ -112,7 +111,10 @@ class OrderCommitView(View):
                 # todo:  judge product reserve
                 if int(count) > sku.stock:
                     transaction.savepoint_rollback(save_id)
-                    return JsonResponse({'res': 6, 'errmsg': 'product shortage'})
+                    return JsonResponse({
+                        'res': 6,
+                        'errmsg': 'product shortage'
+                    })
                 # todo: add data to OrderGoods
                 OrderGoods.objects.create(order=order,
                                           sku=sku,
@@ -141,7 +143,6 @@ class OrderCommitView(View):
 
 class OrderPay(View):
     '''订单支付'''
-
     def post(self, request):
         user = request.user
         if not user.is_authenticated():
@@ -160,8 +161,10 @@ class OrderPay(View):
         print('111111')
         # 使用alipay SDK
         # 配置地址
-        private_path = os.path.join(settings.BASE_DIR, 'apps/order/app_private_key.pem')
-        public_path = os.path.join(settings.BASE_DIR, 'apps/order/alipay_public_key.pem')
+        private_path = os.path.join(settings.BASE_DIR,
+                                    'apps/order/app_private_key.pem')
+        public_path = os.path.join(settings.BASE_DIR,
+                                   'apps/order/alipay_public_key.pem')
         # 获取公私钥字符串
         app_private_key_string = open(private_path).read()
         alipay_public_key_string = open(public_path).read()
@@ -172,20 +175,19 @@ class OrderPay(View):
                         sign_type='RSA2',
                         debug=True)
         total_pay = order.total_price + order.transit_price
-        order_string = alipay.api_alipay_trade_page_pay(out_trade_no=order_id,
-                                                        total_amount=str(total_pay),
-                                                        subject='ttsx%s' % order_id,
-                                                        return_url=None,
-                                                        notify_url=None,
-
-                                                        )
+        order_string = alipay.api_alipay_trade_page_pay(
+            out_trade_no=order_id,
+            total_amount=str(total_pay),
+            subject='ttsx%s' % order_id,
+            return_url=None,
+            notify_url=None,
+        )
         pay_url = 'https://openapi.alipaydev.com/gateway.do?' + order_string
         return JsonResponse({'res': 3, 'pay_url': pay_url})
 
 
 class CheckPayView(View):
     '''获取交易结果'''
-
     def post(self, request):
         user = request.user
         if not user.is_authenticated():
@@ -205,8 +207,10 @@ class CheckPayView(View):
         print('111111')
         # 使用alipay SDK
         # 配置地址
-        private_path = os.path.join(settings.BASE_DIR, 'apps/order/app_private_key.pem')
-        public_path = os.path.join(settings.BASE_DIR, 'apps/order/alipay_public_key.pem')
+        private_path = os.path.join(settings.BASE_DIR,
+                                    'apps/order/app_private_key.pem')
+        public_path = os.path.join(settings.BASE_DIR,
+                                   'apps/order/alipay_public_key.pem')
         # 获取公私钥字符串
         app_private_key_string = open(private_path).read()
         alipay_public_key_string = open(public_path).read()
@@ -219,13 +223,16 @@ class CheckPayView(View):
         while True:
             response = alipay.api_alipay_trade_query(out_trade_no=order_id)
             code = response.get('code')
-            if code == '10000' and response.get('trade_status') == 'TRADE_SUCCESS':
+            if code == '10000' and response.get(
+                    'trade_status') == 'TRADE_SUCCESS':
                 trade_no = response.get('trade_no')
                 order.trade_no = trade_no
                 order.order_status = 4
                 order.save()
                 return JsonResponse({'res': 3, 'message': 'success'})
-            elif code == '40004' or (code == '10000' and response.get('trade_status') == 'WAIT_BUYER_PAY'):
+            elif code == '40004' or (code == '10000'
+                                     and response.get('trade_status')
+                                     == 'WAIT_BUYER_PAY'):
                 # wait
                 import time
                 time.sleep(5)
@@ -236,7 +243,6 @@ class CheckPayView(View):
 
 class CommentView(LoginRequiredMixin, View):
     """订单评论"""
-
     def get(self, request, order_id):
         """提供评论页面"""
         user = request.user
@@ -284,18 +290,20 @@ class CommentView(LoginRequiredMixin, View):
         # 循环获取订单中商品的评论内容
         for i in range(1, total_count + 1):
             # 获取评论的商品的id
-            sku_id = request.POST.get("sku_%d" % i)  # sku_1 sku_2
+            sku_id = request.POST.get("sku_%d" % i) # sku_1 sku_2
             # 获取评论的商品的内容
-            content = request.POST.get('content_%d' % i, '')  # cotent_1 content_2 content_3
+            content = request.POST.get('content_%d' % i,
+                                       '') # cotent_1 content_2 content_3
             try:
-                order_goods = OrderGoods.objects.get(order=order, sku_id=sku_id)
+                order_goods = OrderGoods.objects.get(order=order,
+                                                     sku_id=sku_id)
             except OrderGoods.DoesNotExist:
                 continue
 
             order_goods.comment = content
             order_goods.save()
 
-        order.order_status = 5  # 已完成
+        order.order_status = 5 # 已完成
         order.save()
 
         return redirect(reverse("user:order", kwargs={"page": 1}))

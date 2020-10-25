@@ -46,9 +46,11 @@ def generate_static_index_html():
     # 获取分类商品信息
     for type in types:
         # 获取type种类首页分类商品图片展示信息
-        image_banners = IndexTypeGoodsBanner.objects.filter(type=type, display_type=1).order_by('index')
+        image_banners = IndexTypeGoodsBanner.objects.filter(
+            type=type, display_type=1).order_by('index')
         # 获取type种类首页分类商品展示信息
-        title_banners = IndexTypeGoodsBanner.objects.filter(type=type, display_type=0).order_by('index')
+        title_banners = IndexTypeGoodsBanner.objects.filter(
+            type=type, display_type=0).order_by('index')
 
         type.image_banners = image_banners
         type.title_banners = title_banners

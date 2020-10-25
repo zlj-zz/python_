@@ -16,7 +16,6 @@ from celery_tasks.tasks import send_register_active_mail
 from utils.mixin import LoginRequiredMixin
 from django_redis import get_redis_connection
 
-
 # Create your views here.
 
 
@@ -30,16 +29,6 @@ class RegisterView(View):
         username = request.POST.get('user_name')
         password = request.POST.get('pwd')
         email = request.POST.get('email')
-        # allow = request.POST.get('allow')
-
-        # if not all([username, password, email]):
-        #     return  render(request, 'register.html', {'errmsg': '数据不完整'})
-        #
-        # if not re.match(r'^[a-z0-9][\w.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
-        #     return render(request, 'register.html', {'errmsg': '邮箱格式不正确'})
-        #
-        # if allow != 'on':
-        #     return render(request, 'register.html', {'errmsg': 'qingtongyi'})
 
         try:
             User.objects.get(username=username)
@@ -49,7 +38,8 @@ class RegisterView(View):
             user.save()
 
             # 加密用户信息
-            serializer = TimedJSONWebSignatureSerializer(settings.SECRET_KEY, 3600)
+            serializer = TimedJSONWebSignatureSerializer(
+                settings.SECRET_KEY, 3600)
             info = {'confirm': user.id}
             token = serializer.dumps(info)
             token = token.decode('utf8')
@@ -64,7 +54,6 @@ class RegisterView(View):
 
 class ActiveView(View):
     '''用户激活'''
-
     def get(self, request, token):
         # 解密用户信息
         serializer = TimedJSONWebSignatureSerializer(settings.SECRET_KEY, 3600)
@@ -84,7 +73,6 @@ class ActiveView(View):
 
 class LoginView(View):
     '''登录'''
-
     def get(self, request):
         # 判断
         if 'username' in request.COOKIES:
@@ -93,7 +81,10 @@ class LoginView(View):
         else:
             username = ""
             checked = ""
-        return render(request, 'login.html', {'username': username, 'checked': checked, })
+        return render(request, 'login.html', {
+            'username': username,
+            'checked': checked,
+        })
 
     def post(self, request):
         '''登录校验'''
@@ -116,7 +107,9 @@ class LoginView(View):
                 # 判断是否 记住用户名
                 remember = request.POST.get('remember')
                 if remember == 'on':
-                    response.set_cookie('username', username, max_age=7 * 24 * 3600)
+                    response.set_cookie('username',
+                                        username,
+                                        max_age=7 * 24 * 3600)
                 else:
                     response.delete_cookie('username')
 
@@ -129,7 +122,6 @@ class LoginView(View):
 
 class LogoutView(View):
     '''退出登录'''
-
     def get(self, request):
         logout(request)
         # 退出后跳转页面
@@ -138,7 +130,6 @@ class LogoutView(View):
 
 class UserInfoView(LoginRequiredMixin, View):
     '''用户中心-信息页'''
-
     def get(self, request):
         '''
         Django 给 request 添加 request.user
@@ -177,7 +168,6 @@ class UserInfoView(LoginRequiredMixin, View):
 
 class UserOrderView(LoginRequiredMixin, View):
     '''用户中心-订单页'''
-
     def get(self, request, page):
         # 获取用户订单信息
         user = request.user
@@ -222,7 +212,6 @@ class UserOrderView(LoginRequiredMixin, View):
 
 class AddressView(LoginRequiredMixin, View):
     '''用户中心-地址页'''
-
     def get(self, request):
         # 获取用户默认收货地址
         user = request.user
@@ -231,7 +220,10 @@ class AddressView(LoginRequiredMixin, View):
         except Address.DoesNotExist:
             address = None
 
-        return render(request, 'user_center_site.html', {'page': 'address', 'address': address})
+        return render(request, 'user_center_site.html', {
+            'page': 'address',
+            'address': address
+        })
 
     def post(self, request):
 
@@ -242,10 +234,12 @@ class AddressView(LoginRequiredMixin, View):
         phone = request.POST.get('phone')
 
         if not all([receiver, addr, phone]):
-            return render(request, 'user_center_site.html', {'errmsg': '数据不完整'})
+            return render(request, 'user_center_site.html',
+                          {'errmsg': '数据不完整'})
 
         if not re.match(r'^1[3|4|5|7|8][0-9]{9}$', phone):
-            return render(request, 'user_center_site.html', {'errmsg': '手机号码格式不正确'})
+            return render(request, 'user_center_site.html',
+                          {'errmsg': '手机号码格式不正确'})
 
         # 业务处理 地址添加
         user = request.user

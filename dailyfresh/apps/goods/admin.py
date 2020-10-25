@@ -3,11 +3,10 @@ from django.core.cache import cache
 from goods.models import GoodsType, GoodsSKU, Goods, GoodsImage, IndexGoodsBanner, IndexTypeGoodsBanner, \
     IndexPromotionBanner
 
-
 # Register your models here.
 
-class BaseModelAdmin(admin.ModelAdmin):
 
+class BaseModelAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         super().save_model(request, obj, form, change)
 
@@ -28,14 +27,18 @@ class BaseModelAdmin(admin.ModelAdmin):
         # 清除缓存
         cache.delete('index_page_data')
 
+
 class GoodsTypeAdmin(BaseModelAdmin):
     pass
+
 
 class IndexGoodsBannerAdmin(BaseModelAdmin):
     pass
 
+
 class IndexTypeGoodsBannerAdmin(BaseModelAdmin):
     pass
+
 
 class IndexPromotionBannerAdmin(BaseModelAdmin):
     pass

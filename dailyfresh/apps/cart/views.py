@@ -6,13 +6,12 @@ from django_redis import get_redis_connection
 from utils.mixin import LoginRequiredMixin
 from goods.models import GoodsSKU
 
-
 # Create your views here.
+
 
 # /cart/add
 class CartAddView(View):
     '''购物车记录添加'''
-
     def post(self, request):
         '''append'''
         user = request.user
@@ -43,12 +42,15 @@ class CartAddView(View):
         conn.hset(cart_key, sku_id, count)
         total_count = conn.hlen(cart_key)
         # todo: 返回
-        return JsonResponse({'res': 5, 'total_count': total_count, 'message': 'added successfully'})
+        return JsonResponse({
+            'res': 5,
+            'total_count': total_count,
+            'message': 'added successfully'
+        })
 
 
 class CartInfoView(LoginRequiredMixin, View):
     '''cart info page'''
-
     def get(self, request):
         # todo: get info
         user = request.user
@@ -79,7 +81,6 @@ class CartInfoView(LoginRequiredMixin, View):
 # cart/update
 class CartUpdateView(View):
     '''cart info update'''
-
     def post(self, request):
         user = request.user
         if not user.is_authenticated():
@@ -110,12 +111,15 @@ class CartUpdateView(View):
         for val in vals:
             tatal_count += int(val)
         # todo: 返回
-        return JsonResponse({'res': 5, 'total_count': tatal_count, 'message': 'update successfully'})
+        return JsonResponse({
+            'res': 5,
+            'total_count': tatal_count,
+            'message': 'update successfully'
+        })
 
 
 class CartDeleteView(View):
     ''''''
-
     def post(self, request):
         user = request.user
         if not user.is_authenticated():
@@ -140,4 +144,8 @@ class CartDeleteView(View):
         for val in vals:
             tatal_count += int(val)
         # todo: 返回
-        return JsonResponse({'res': 3, 'total_count':tatal_count, 'message': 'delete successfully'})
+        return JsonResponse({
+            'res': 3,
+            'total_count': tatal_count,
+            'message': 'delete successfully'
+        })

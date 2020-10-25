@@ -8,8 +8,8 @@ from django_redis import get_redis_connection
 from goods.models import GoodsType, IndexGoodsBanner, IndexPromotionBanner, IndexTypeGoodsBanner, GoodsSKU
 from order.models import OrderGoods
 
-
 # Create your views here.
+
 
 # http://127.0.0.1:8000
 class IndexView(View):
@@ -27,14 +27,17 @@ class IndexView(View):
             goods_banners = IndexGoodsBanner.objects.all().order_by('index')
 
             # todo: 获取促销活动信息
-            promotion_banners = IndexPromotionBanner.objects.all().order_by('index')
+            promotion_banners = IndexPromotionBanner.objects.all().order_by(
+                'index')
 
             # todo: 获取分类商品信息
             for type in types:
                 # todo: 获取type种类首页分类商品图片展示信息
-                image_banners = IndexTypeGoodsBanner.objects.filter(type=type, display_type=1).order_by('index')
+                image_banners = IndexTypeGoodsBanner.objects.filter(
+                    type=type, display_type=1).order_by('index')
                 # todo: 获取type种类首页分类商品展示信息
-                title_banners = IndexTypeGoodsBanner.objects.filter(type=type, display_type=0).order_by('index')
+                title_banners = IndexTypeGoodsBanner.objects.filter(
+                    type=type, display_type=0).order_by('index')
 
                 type.image_banners = image_banners
                 type.title_banners = title_banners
@@ -63,7 +66,6 @@ class IndexView(View):
 
 class DetailView(View):
     '''详情页'''
-
     def get(self, request, goods_id):
         try:
             sku = GoodsSKU.objects.get(id=goods_id)
@@ -77,10 +79,12 @@ class DetailView(View):
         sku_orders = OrderGoods.objects.filter(sku=sku).exclude(comment='')
 
         # 获取新品推荐
-        new_skus = GoodsSKU.objects.filter(type=sku.type).order_by('-create_time')[:2]
+        new_skus = GoodsSKU.objects.filter(
+            type=sku.type).order_by('-create_time')[:2]
 
         # 获取同一个SPU的其他商品
-        same_spu_skus = GoodsSKU.objects.filter(goods=sku.goods).exclude(id=goods_id)
+        same_spu_skus = GoodsSKU.objects.filter(goods=sku.goods).exclude(
+            id=goods_id)
 
         # 获取购物车中商品数
         user = request.user
@@ -115,7 +119,6 @@ class DetailView(View):
 # /list/id/page/sort
 class ListView(View):
     '''list'''
-
     def get(self, request, type_id, page):
 
         try:
@@ -162,7 +165,8 @@ class ListView(View):
             pages = range(page - 2, page + 3)
 
         # 获取新品推荐
-        new_skus = GoodsSKU.objects.filter(type=type).order_by('-create_time')[:2]
+        new_skus = GoodsSKU.objects.filter(
+            type=type).order_by('-create_time')[:2]
 
         # 获取购物车中商品数
         user = request.user
