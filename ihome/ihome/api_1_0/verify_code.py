@@ -21,7 +21,8 @@ def get_image_code(image_code_id):
     name, text, image_data = captcha.generate_captcha()
     # save code to redis
     try:
-        redis_store.setex("image_code_%s" % image_code_id, constants.IMAGE_CODE_REDIS_EXPIRES, text)
+        redis_store.setex("image_code_%s" % image_code_id,
+                          constants.IMAGE_CODE_REDIS_EXPIRES, text)
     except Exception as e:
         # 捕获异常
         current_app.logger.error(e)
@@ -73,9 +74,11 @@ def get_sms_code(mobile):
     # 生成短信验证码
     sms_code = "%06d" % random.randint(0, 999999)
     try:
-        redis_store.setex("sms_code_%s" % mobile, constants.SMS_CODE_REDIS_EXPIRES, sms_code)
+        redis_store.setex("sms_code_%s" % mobile,
+                          constants.SMS_CODE_REDIS_EXPIRES, sms_code)
         #
-        redis_store.setex("send_sms_%s" % mobile, constants.SEND_SMS_CODE_INTERVAL, 1)
+        redis_store.setex("send_sms_%s" % mobile,
+                          constants.SEND_SMS_CODE_INTERVAL, 1)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg="save sms code error")
@@ -83,10 +86,11 @@ def get_sms_code(mobile):
     try:
         # ccp = CCP()
         # result = ccp.send_template_sms(mobile, [sms_code, int(constants.SMS_CODE_REDIS_EXPIRES / 60)], 1)
-        send_sms.delay(mobile, [sms_code, int(constants.SMS_CODE_REDIS_EXPIRES / 60)], 1)
+        send_sms.delay(
+            mobile,
+            [sms_code, int(constants.SMS_CODE_REDIS_EXPIRES / 60)], 1)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno=RET.THIRDERR, errmsg="send error")
 
     return jsonify(errno=RET.OK, errmsg="ok")
-

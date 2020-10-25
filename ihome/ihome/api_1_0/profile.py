@@ -1,3 +1,4 @@
+# /usr/bin/python2.7
 # coding:utf-8
 
 from . import api
@@ -30,10 +31,13 @@ def set_usesr_avatar():
         db.session.rollback()
         current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg="保存失败")
-    return jsonify(errno=RET.OK, errmsg="OK", data={"avatar_url": fdfs.url(file_name)})
+    return jsonify(errno=RET.OK,
+                   errmsg="OK",
+                   data={"avatar_url": fdfs.url(file_name)})
 
 
 # group1/M00/00/00/fwAAAV48GryESyQAAAAAAC-P_pE8153111
+
 
 @api.route("/users/name", methods=["PUT"])
 @login_required
@@ -46,7 +50,7 @@ def change_user_name():
     req_data = request.get_json()
     if not req_data:
         return jsonify(errno=RET.PARAMERR, errmsg="参数不完整")
-    name = req_data.get("name")  # 用户想要设置的名字
+    name = req_data.get("name") # 用户想要设置的名字
     if not name:
         return jsonify(errno=RET.PARAMERR, errmsg="名字不能为空")
 
@@ -112,8 +116,8 @@ def set_user_auth():
     if not req_data:
         return jsonify(errno=RET.PARAMERR, errmsg="参数错误")
 
-    real_name = req_data.get("real_name")  # 真实姓名
-    id_card = req_data.get("id_card")  # 身份证号
+    real_name = req_data.get("real_name") # 真实姓名
+    id_card = req_data.get("id_card") # 身份证号
 
     # 参数校验
     if not all([real_name, id_card]):

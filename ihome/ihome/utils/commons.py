@@ -6,10 +6,8 @@ from ihome.utils.response_code import RET
 import functools
 
 
-#
 class ReConverter(BaseConverter):
     """custom re converter"""
-
     def __init__(self, url_map, regex):
         super(ReConverter, self).__init__(url_map)
         self.regex = regex

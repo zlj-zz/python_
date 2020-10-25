@@ -21,11 +21,11 @@ serverPort = '8883'
 # REST版本号
 softVersion = '2013-12-26'
 
-
 # 发送模板短信
 # @param to 手机号码
 # @param datas 内容数据 格式为数组 例如：{'12','34'}，如不需替换请填 ''
 # @param $tempId 模板Id
+
 
 class CCP(object):
     """自己封装的发短信辅助类"""

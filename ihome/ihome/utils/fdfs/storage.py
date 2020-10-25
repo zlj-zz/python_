@@ -7,7 +7,6 @@ from ihome.models import User
 
 class FDFSStorage(object):
     '''fastdfs文件存储类'''
-
     def __init__(self, client_conf=None, base_url=None):
 
         if client_conf is None:

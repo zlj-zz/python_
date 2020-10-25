@@ -15,7 +15,7 @@ class Config(object):
     # flask-session setting
     SESSION_TYPE = 'redis'
     SESSION_REDIS = redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT)
-    SESSION_USE_SIGNER = True  # hide cookie's session id
+    SESSION_USE_SIGNER = True # hide cookie's session id
     PERMANENT_SESSION_LIFETIME = 3600 * 24 * 7
 
 
